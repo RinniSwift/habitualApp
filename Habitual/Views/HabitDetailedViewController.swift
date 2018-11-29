@@ -40,10 +40,10 @@ class HabitDetailedViewController: UIViewController {
     private func updateUI() {
         title = habit.title
         imageViewIcon.image = habit.selectedImage.image
-        currentStreakLabel.text = "\(habit.currentStreak) days"
-        totalCompletionsLabel.text = String(habit.numberOfCompletions)
-        bestStreakLabel.text = String(habit.bestStreal)
-        dateLabel.text = habit.dateCreated.stringValue
+        currentStreakLabel.text = "Current Streak: \(habit.currentStreak)"
+        totalCompletionsLabel.text = "Total Completions: \(habit.numberOfCompletions)"
+        bestStreakLabel.text = "Best Streak: \(habit.bestStreal)"
+        dateLabel.text = String(habit.dateCreated.stringValue)
         
         if habit.hasCompletedForToday {
             buttonAction.setTitle("Completed For Today!", for: .normal)
